@@ -2,6 +2,64 @@
 <html lang="en">
    @include('header.header')
    <!-- body -->
+   <head>
+   <style>
+      #product_grid_container {
+         display: grid;
+         height: 100%;
+         grid-template-columns: repeat(4, 1fr);
+         /* grid-template-rows: 100px; */
+      }
+      #product_grid_container .product_list_image{
+
+      }
+      #product_grid_container .product_list_caption p{
+         font-weight:400 !important;
+         font-size:16px !important;
+         color:#343a40;
+         margin-top:5px;
+      }
+      #product_grid_container .product_list_price p{
+         margin-top:18px;
+         font-size:14px !important;
+         font-weight:bold;
+         color:#343a40;
+         float:left;
+      }
+      #product_grid_container .product_list_action{
+         padding-top:15px;
+         float:right;
+      }
+      #product_grid_container .action_button{
+         padding:9px;
+         border-radius: 7px;
+         font-size:12px;
+         color:#343a40;
+         border-color:#ff9336;
+         margin-top:23px;
+         font-weight:bold; color:#131312;
+    
+      }
+      #product_grid_container .action_button:hover{
+         animation: mymove 1s;
+         cursor: pointer;
+         border-radius: 7px;
+         color:white;
+         padding:9px;
+         background-color:#ff9336;
+      }
+      #product_grid_container .product_list_idr{
+            font-size:18px;
+      }
+    
+      
+      @keyframes mymove {
+      from {background-color: #ffffff;}
+      to {background-color: #ff9336;}
+      }
+
+   </style>
+   </head>
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
@@ -367,8 +425,88 @@
                   </div>
                </div>
             </div>
-            <div class="row">
-               <div class="col-md-4 offset-md-2">
+            <div class="row" style = "width:100%;" id = "product_grid_container">
+       
+                     <div class = "col-6" style = "max-width:1000px;">
+                           <div class = "product_list_image">
+                              <img src = "{{asset('default/images/gallery5.jpg')}}">
+                           </div>
+                           <div class="product_list_caption">
+                              <p>Patung Beruang Gold Float emas</p>
+                           </div>
+                           <div class="product_list_price">
+                           <p> 
+                              {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
+
+                                 <span class = "product_list_idr"> IDR</span> 10.000</p>
+                           </div>
+                           <div class="product_list_action" >
+                              {{-- <button class = "btn btn-outline-info" style = ""> --}}
+                                 <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                              {{-- </button> --}}
+                           </div>
+                     </div>
+                     <div class = "col-6" style = "max-width:1000px;">
+                        <div class = "product_list_image">
+                           <img src = "{{asset('default/images/gallery5.jpg')}}">
+                        </div>
+                        <div class="product_list_caption">
+                           <p>Patung Beruang Gold Float emas</p>
+                        </div>
+                        <div class="product_list_price">
+                        <p> 
+                           {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
+
+                              <span class = "product_list_idr"> IDR</span> 10.000</p>
+                        </div>
+                        <div class="product_list_action" >
+                           {{-- <button class = "btn btn-outline-info" style = ""> --}}
+                              <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                           {{-- </button> --}}
+                        </div>
+                  </div>
+                  <div class = "col-6" style = "max-width:1000px;">
+                     <div class = "product_list_image">
+                        <img src = "{{asset('default/images/gallery5.jpg')}}">
+                     </div>
+                     <div class="product_list_caption">
+                        <p>Patung Beruang Gold Float emas</p>
+                     </div>
+                     <div class="product_list_price">
+                     <p> 
+                        {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
+
+                           <span class = "product_list_idr"> IDR</span> 10.000</p>
+                     </div>
+                     <div class="product_list_action" >
+                        {{-- <button class = "btn btn-outline-info" style = ""> --}}
+                           <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                        {{-- </button> --}}
+                     </div>
+               </div>
+               <div class = "col-6" style = "max-width:1000px;">
+                  <div class = "product_list_image">
+                     <img src = "{{asset('default/images/gallery5.jpg')}}">
+                  </div>
+                  <div class="product_list_caption">
+                     <p>Patung Beruang Gold Float emas</p>
+                  </div>
+                  <div class="product_list_price">
+                  <p> 
+                     {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
+
+                        <span class = "product_list_idr"> IDR</span> 10.000</p>
+                  </div>
+                  <div class="product_list_action" >
+                     {{-- <button class = "btn btn-outline-info" style = ""> --}}
+                        <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                     {{-- </button> --}}
+                  </div>
+            </div>
+                   
+             
+           
+               {{-- <div class="col-md-4 offset-md-2">
                   <div id="new" class="news_box">
                      <div class="news_img">
                         <figure><img  alt="#"/></figure>
@@ -404,7 +542,7 @@
                </div>
                <div class="col-md-12">
                   <a class="read_more" href="Javascript:void(0)"> Read More</a>
-               </div>
+               </div> --}}
             </div>
          </div>
       </div>
