@@ -4,12 +4,224 @@
    <!-- body -->
    <head>
    <style>
-      #product_grid_container {
-         display: grid;
-         height: 100%;
-         grid-template-columns: repeat(4, 1fr);
-         /* grid-template-rows: 100px; */
-      }
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.925rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1170px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar,
+.navbar > .container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .navbar,
+.navbar > .container {
+    display: block;
+  }
+}
+
+.navbar {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid #eceef3;
+  /*
+  |-----------------------------------
+  | Start navbar logo or brand etc..
+  |-----------------------------------
+  */
+  /*
+  |-----------------------------------
+  | Start navbar menu
+  |-----------------------------------
+  */
+}
+@media (min-width: 576px) {
+  .navbar .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar .container {
+    max-width: 1140px;
+  }
+}
+.navbar .navbar-header {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .navbar .navbar-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+}
+.navbar .navbar-header .navbar-toggler {
+  cursor: pointer;
+  border: none;
+  display: none;
+  outline: none;
+}
+@media (max-width: 768px) {
+  .navbar .navbar-header .navbar-toggler {
+    display: block;
+  }
+}
+.navbar .navbar-header .navbar-toggler span {
+  height: 2px;
+  width: 22px;
+  background-color: #929aad;
+  display: block;
+}
+.navbar .navbar-header .navbar-toggler span:not(:last-child) {
+  margin-bottom: 0.2rem;
+}
+.navbar .navbar-header > a {
+  font-weight: 500;
+  color: #3c4250;
+}
+.navbar .navbar-menu {
+  display: flex;
+  align-items: center;
+  flex-basis: auto;
+  flex-grow: 1;
+}
+@media (max-width: 768px) {
+  .navbar .navbar-menu {
+    display: none;
+    text-align: center;
+  }
+}
+.navbar .navbar-menu.active {
+  display: flex !important;
+}
+.navbar .navbar-menu .navbar-nav {
+  margin-left: auto;
+  flex-direction: row;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav {
+    width: 100%;
+    display: block;
+    border-top: 1px solid #EEE;
+    margin-top: 1rem;
+  }
+}
+.navbar .navbar-menu .navbar-nav > li > a {
+  color: #3c4250;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+.navbar .navbar-menu .navbar-nav > li > a:hover {
+   color: rgba(220, 152, 7, 0.935);
+   font-weight: bold;
+}
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav > li > a {
+    border-bottom: 1px solid #eceef3;
+  }
+}
+.navbar .navbar-menu .navbar-nav > li.active a {
+  color: rgba(220, 152, 7, 0.935);
+  font-weight: bold;
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+  list-style: none;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  background-color: #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  min-width: 160px;
+  width: auto;
+  white-space: nowrap;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  z-index: 99999;
+  border-radius: 0.75rem;
+  display: none;
+}
+@media (max-width: 768px) {
+  .navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown {
+    position: relative;
+    box-shadow: none;
+  }
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown li a {
+  color: #3c4250;
+  padding: 0.25rem 1rem;
+  display: block;
+}
+.navbar .navbar-menu .navbar-nav .navbar-dropdown .dropdown.show {
+  display: block !important;
+}
+.navbar .navbar-menu .navbar-nav .dropdown > .separator {
+  height: 1px;
+  width: 100%;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  background-color: #eceef3;
+}
+.navbar .navbar-dropdown {
+  position: relative;
+}
+
+.navbar .navbar-header > a span {
+  color: #66f;
+}
+
+.navbar .navbar-header h4 {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+@media (max-width: 768px) {
+  .navbar .navbar-header h4 {
+    font-size: 1.05rem;
+  }
+}                                         
+            
       #product_grid_container .product_list_image{
 
       }
@@ -51,6 +263,30 @@
       #product_grid_container .product_list_idr{
             font-size:18px;
       }
+
+      .jumbotron{
+      background: rgb(235, 226, 226);
+         padding: 100px;
+      }
+    .content{
+      background: #fff;
+      padding: 50px;
+      font-size: 19px;
+      line-height: 30px;
+      min-height: 3000px;   
+    }
+
+    .scroll-line{
+    background: linear-gradient(217deg, rgba(136, 94, 4, 0.935), rgba(244, 127, 38, 0.787) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+      top: 0;
+      left: 0;
+      height: 10px;
+      position: fixed;
+      transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      z-index: 1000;
+    }      
     
       
       @keyframes mymove {
@@ -58,16 +294,23 @@
       to {background-color: #ff9336;}
       }
 
+      @keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
    </style>
    </head>
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="{{asset('default/images/loading.gif')}}" alt="#"/></div>
+         <div class="loader"><img  src="{{asset('default/images/loading.gif')}}" alt="#"/></div>
       </div>
       <!-- end loader -->
       <!-- header -->
-      <header>
+      
+      {{-- <header>
          <!-- header inner -->
          <div class="header">
             <div class="container">
@@ -76,7 +319,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="{{asset('default/images/logo.png')}}" alt="#" /></a>
+                              <a href="index.html"><img src="{{asset('main/images/logo/logo_belles_home.jpg')}}" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -113,12 +356,15 @@
                </div>
             </div>
          </div>
-      </header>
+      </header> --}}
+
+      @include('header.menu')
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
       <section class="banner_main">
-         <div style = "background-color:#131312;opacity:0.3;position:absolute;width:100%;height:100%;z-index:500;">.</div>
+         <div style = "background-color:#131312;opacity:0.3;position:absolute;width:100%;height:100%;z-index:500;">
+            <div style = "position: absolute;top:75px;right:150px;color:white;font-size:14px;"><span id = "tulisanatas" style = "opacity:0;">Home Decor Terbaik</span> <br> <span id = "tulisanbawah" style = "font-size:18px;opacity:0;"> Hanya di <b>BellesHome.</b></span></div></div>
          <div id="myCarousel" class="carousel slide banner" data-ride="carousel">
             <ol class="carousel-indicators">
                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -126,7 +372,7 @@
                <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner" style = "z-index:1000;">
-               <div class="carousel-item active">
+               {{-- <div class="carousel-item active">
                   <div class="container">
                      <div class="carousel-caption relative">
                         <div class="row">
@@ -170,7 +416,7 @@
                         </div>
                      </div>
                   </div>
-               </div>
+               </div> --}}
             </div>
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
             <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -189,9 +435,9 @@
             <div class="row">
                <div class="col-md-5">
                   <div class="titlepage">
-                     <h2>About <span class="green" style = "color:#ff9336 !important;">Us</span></h2>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humourThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-                     <a class="read_more" href="Javascript:void(0)"> Read More</a>
+                     <h2>About <span class="green" style = "color:rgba(220, 152, 7, 0.935) !important;">Us</span></h2>
+                     <p>Kami adalah perusahaan yang menyediakan barang home decor terbaik agar ruangan-mu terasa elegan dan nyaman bersama <b style = "font-size:20px;">Belles Home</b></p>
+                     <a class="read_more" href="Javascript:void(0)">Lihat Produk</a>
                   </div>
                </div>
                <div class="col-md-7">
@@ -259,8 +505,8 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Our <span class="green" style = "color:#ff9336 !important">Category</span></h2>
-                     <p>here are many variations of our product, come and see.</p>
+                     <h2>Our <span class="green" style = "color:rgba(220, 152, 7, 0.935) !important;">Category</span></h2>
+                     <p>here are many variations of our category, come and see.</p>
                   </div>
                </div>
             </div>
@@ -425,272 +671,152 @@
                   </div>
                </div>
             </div>
+            
             <div class="row" style = "width:100%;" id = "product_grid_container">
-       
-                     <div class = "col-6" style = "max-width:1000px;">
-                           <div class = "product_list_image">
-                              <img src = "{{asset('default/images/gallery5.jpg')}}">
-                           </div>
-                           <div class="product_list_caption">
-                              <p>Patung Beruang Gold Float emas</p>
-                           </div>
-                           <div class="product_list_price">
-                           <p> 
-                              {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
+               <div id = "myCarou" class="owl-carousel owl-theme">
+                        <div class="item">
+                           <div class = "col-6" style = "max-width:1000px;">
+                              <div class = "product_list_image">
+                                 <img src = "{{asset('default/images/gallery5.jpg')}}">
+                              </div>
+                              <div class="product_list_caption">
+                                 <p>Patung Beruang Gold Float emas</p>
+                              </div>
+                              <div class="product_list_price">
+                              <p> 
+                                 {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
 
-                                 <span class = "product_list_idr"> IDR</span> 10.000</p>
-                           </div>
-                           <div class="product_list_action" >
-                              {{-- <button class = "btn btn-outline-info" style = ""> --}}
-                                 <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-                              {{-- </button> --}}
-                           </div>
-                     </div>
-                     <div class = "col-6" style = "max-width:1000px;">
-                        <div class = "product_list_image">
-                           <img src = "{{asset('default/images/gallery5.jpg')}}">
-                        </div>
-                        <div class="product_list_caption">
-                           <p>Patung Beruang Gold Float emas</p>
-                        </div>
-                        <div class="product_list_price">
-                        <p> 
-                           {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
+                                    <span class = "product_list_idr"> IDR</span> 10.000</p>
+                              </div>
+                              <div class="product_list_action" >
+                                 {{-- <button class = "btn btn-outline-info" style = ""> --}}
+                                    <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                                 {{-- </button> --}}
+                              </div>
+                         </div>
+                       </div>
+                       <div class="item">
+                              <div class = "col-6" style = "max-width:1000px;">
+                                 <div class = "product_list_image">
+                                    <img src = "{{asset('default/images/gallery5.jpg')}}">
+                                 </div>
+                                 <div class="product_list_caption">
+                                    <p>Patung Beruang Gold Float emas</p>
+                                 </div>
+                                 <div class="product_list_price">
+                                 <p> 
+                                    {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
 
-                              <span class = "product_list_idr"> IDR</span> 10.000</p>
+                                       <span class = "product_list_idr"> IDR</span> 10.000</p>
+                                 </div>
+                                 <div class="product_list_action" >
+                                    {{-- <button class = "btn btn-outline-info" style = ""> --}}
+                                       <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                                    {{-- </button> --}}
+                                 </div>
+                            </div>
                         </div>
-                        <div class="product_list_action" >
-                           {{-- <button class = "btn btn-outline-info" style = ""> --}}
-                              <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-                           {{-- </button> --}}
+                        <div class="item">
+                           <div class = "col-6" style = "max-width:1000px;">
+                              <div class = "product_list_image">
+                                 <img src = "{{asset('default/images/gallery5.jpg')}}">
+                              </div>
+                              <div class="product_list_caption">
+                                 <p>Patung Beruang Gold Float emas</p>
+                              </div>
+                              <div class="product_list_price">
+                              <p> 
+                                 {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
+
+                                    <span class = "product_list_idr"> IDR</span> 10.000</p>
+                              </div>
+                              <div class="product_list_action" >
+                                 {{-- <button class = "btn btn-outline-info" style = ""> --}}
+                                    <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                                 {{-- </button> --}}
+                              </div>
+                         </div>
+                       </div>
+                       <div class="item">
+                              <div class = "col-6" style = "max-width:1000px;">
+                                 <div class = "product_list_image">
+                                    <img src = "{{asset('default/images/gallery5.jpg')}}">
+                                 </div>
+                                 <div class="product_list_caption">
+                                    <p>Patung Beruang Gold Float emas</p>
+                                 </div>
+                                 <div class="product_list_price">
+                                 <p> 
+                                    {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
+
+                                       <span class = "product_list_idr"> IDR</span> 10.000</p>
+                                 </div>
+                                 <div class="product_list_action" >
+                                    {{-- <button class = "btn btn-outline-info" style = ""> --}}
+                                       <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                                    {{-- </button> --}}
+                                 </div>
+                            </div>
                         </div>
-                  </div>
-                  <div class = "col-6" style = "max-width:1000px;">
-                     <div class = "product_list_image">
-                        <img src = "{{asset('default/images/gallery5.jpg')}}">
-                     </div>
-                     <div class="product_list_caption">
-                        <p>Patung Beruang Gold Float emas</p>
-                     </div>
-                     <div class="product_list_price">
-                     <p> 
-                        {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
-
-                           <span class = "product_list_idr"> IDR</span> 10.000</p>
-                     </div>
-                     <div class="product_list_action" >
-                        {{-- <button class = "btn btn-outline-info" style = ""> --}}
-                           <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-                        {{-- </button> --}}
-                     </div>
-               </div>
-               <div class = "col-6" style = "max-width:1000px;">
-                  <div class = "product_list_image">
-                     <img src = "{{asset('default/images/gallery5.jpg')}}">
-                  </div>
-                  <div class="product_list_caption">
-                     <p>Patung Beruang Gold Float emas</p>
-                  </div>
-                  <div class="product_list_price">
-                  <p> 
-                     {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
-
-                        <span class = "product_list_idr"> IDR</span> 10.000</p>
-                  </div>
-                  <div class="product_list_action" >
-                     {{-- <button class = "btn btn-outline-info" style = ""> --}}
-                        <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-                     {{-- </button> --}}
-                  </div>
-            </div>
-                   
-             
-           
-               {{-- <div class="col-md-4 offset-md-2">
-                  <div id="new" class="news_box">
-                     <div class="news_img">
-                        <figure><img  alt="#"/></figure>
-                     </div>
-                     <div class="news_room">
-                        <span>Post By :limelight</span>
-                        <ul>
-                           <li><a href="Javascript:void(0)">Like <i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                           <li><a href="Javascript:void(0)">Comment <i class="fa fa-comments-o" aria-hidden="true"></i></a></li>
-                           <li><a href="Javascript:void(0)">Share <i class="fa fa-share-alt" aria-hidden="true"></i></a></li>
-                        </ul>
-                        <h3>Interior Design</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content  </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 ">
-                  <div id="new" class="news_box">
-                     <div class="news_img mr_le">
-                        <figure><img  alt="#"/></figure>
-                     </div>
-                     <div class="news_room">
-                        <span>Post By :limelight</span>
-                        <ul>
-                           <li><a href="Javascript:void(0)">Like <i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
-                           <li><a href="Javascript:void(0)">Comment <i class="fa fa-comments-o" aria-hidden="true"></i></a></li>
-                           <li><a href="Javascript:void(0)">Share <i class="fa fa-share-alt" aria-hidden="true"></i></a></li>
-                        </ul>
-                        <h3>Artictecture</h3>
-                        <p>It is a long established fact that a reader will be distracted by the readable content  </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-12">
-                  <a class="read_more" href="Javascript:void(0)"> Read More</a>
-               </div> --}}
+              </div>
             </div>
          </div>
       </div>
-      <!-- end latest news -->
-      <!-- testimonial -->
-      {{-- <div id="testimonial" class="Testimonial">
-         <div class="container-fluid">
-            <div class="row d_flex">
-               <div class="col-md-8 pad_left0">
-                  <div id="testimon" class="carousel slide banner_testimonial" data-ride="carousel">
-                     <ol class="carousel-indicators">
-                        <li data-target="#testimon" data-slide-to="0" class="active"></li>
-                        <li data-target="#testimon" data-slide-to="1"></li>
-                        <li data-target="#testimon" data-slide-to="2"></li>
-                     </ol>
-                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                           <div class="container">
-                              <div class="carousel-caption relative">
-                                 <div class="row">
-                                    <div class="col-md-6">
-                                       <div class="text_humai">
-                                          <i><img src="images/tett1.png" alt="#"/></i>
-                                          <span>HumouThere</span>
-                                          <p>T suffered alteration in some form, by injected humouThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou</p>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                       <div class="text_humai">
-                                          <i><img src="images/tett2.png" alt="#"/></i>
-                                          <span>HumouThere</span>
-                                          <p>T suffered alteration in some form, by injected humouThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <div class="container">
-                              <div class="carousel-caption relative">
-                                 <div class="row">
-                                    <div class="col-md-6">
-                                       <div class="text_humai">
-                                          <i><img src="images/tett1.png" alt="#"/></i>
-                                          <span>HumouThere</span>
-                                          <p>T suffered alteration in some form, by injected humouThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou</p>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                       <div class="text_humai">
-                                          <i><img src="images/tett2.png" alt="#"/></i>
-                                          <span>HumouThere</span>
-                                          <p>T suffered alteration in some form, by injected humouThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <div class="container">
-                              <div class="carousel-caption relative">
-                                 <div class="row">
-                                    <div class="col-md-6">
-                                       <div class="text_humai">
-                                          <i><img src="images/tett1.png" alt="#"/></i>
-                                          <span>HumouThere</span>
-                                          <p>T suffered alteration in some form, by injected humouThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou</p>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                       <div class="text_humai">
-                                          <i><img src="images/tett2.png" alt="#"/></i>
-                                          <span>HumouThere</span>
-                                          <p>T suffered alteration in some form, by injected humouThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <a class="carousel-control-prev" href="#testimon" role="button" data-slide="prev">
-                     <i class="fa fa-angle-left" aria-hidden="true"></i>
-                     <span class="sr-only">Previous</span>
-                     </a>
-                     <a class="carousel-control-next" href="#testimon" role="button" data-slide="next">
-                     <i class="fa fa-angle-right" aria-hidden="true"></i>
-                     <span class="sr-only">Next</span>
-                     </a>
-                  </div>
-               </div>
-               <div class="col-md-4 ">
-                  <div class="titlepage">
-                     <h2>Testimonial</h2>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div> --}}
-      <!-- end design -->
-      <!--  contact -->
-      {{-- <div id="contact" class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>Contact Us</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-6">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
-                        </div>
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message</textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Send</button>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-               <div class="col-md-6">
-                  <div class="map_main">
-                     <div class="map-responsive">
-                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="345" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div> --}}
+   
       @include("header.footer")
    </body>
 </html>
 <script>
-      $(".banner_main h1").fadeIn(3000);
 
+$(document).ready(function () {
+//   $("#tulisanatas").animate({ opacity: 1 });
+//   $("#tulisanbawah").animate({ opacity: 1 });
+
+  $("#tulisanatas").animate({opacity: 1}, 2350)
+  .promise()
+  .then(function() {
+       $("#tulisanbawah").animate({opacity: 1}, 950);
+  });
+  
+
+
+
+});
+
+const scrollline = document.querySelector('.scroll-line');
+
+function fillscrollline(){
+  const windowHeight = window.innerHeight;
+  const fullHeight = document.body.clientHeight;
+  const scrolled = window.scrollY;
+  const percentScrolled = (scrolled / (fullHeight - windowHeight)) * 100;
+
+  scrollline.style.width = percentScrolled + '%';
+};
+
+window.addEventListener('scroll', fillscrollline);
+
+
+      $(".banner_main h1").fadeIn(3000);
+    
+      $('#myCarou').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:true
+        },
+        1000:{
+            items:4,
+            nav:true,
+            loop:true
+        }
+    }
+})
 </script>

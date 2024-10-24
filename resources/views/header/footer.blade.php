@@ -77,3 +77,4 @@
      <!-- sidebar -->
      <script src="{{asset('default/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
      <script src="{{asset('default/js/custom.js')}}"></script>
+     <script src="{{asset('main/owl/OwlCarousel2-2.3.4/dist/owl.carousel.min.js')}}"></script>

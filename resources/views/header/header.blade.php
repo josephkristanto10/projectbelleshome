@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Home Decor</title>
-    <meta name="keywords" content="">
+    <title>Belle Home | Best Home Decor in Town</title>
+    <meta name="keywords" content="belleshome.com, belles-home.com, homedecor, home decor">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- bootstrap css -->
@@ -17,7 +17,7 @@
     <!-- Responsive-->
     <link rel="stylesheet" href="{{asset('default/css/responsive.css')}}">
     <!-- fevicon -->
-    <link rel="icon" href="{{asset('default/images/fevicon.png')}}" type="image/gif" />
+    <link rel="icon" href="{{asset('main/images/logo/logo_belles_home.jpg')}}" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="{{asset('default/css/jquery.mCustomScrollbar.min.css')}}">
     <!-- Tweaks for older IEs-->
