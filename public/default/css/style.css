@@ -448,7 +448,8 @@ button {
 }
 
 .read_more:hover {
-     background: #ff9336;
+     /* background: #ff9336; */
+     background : rgba(220, 152, 7, 0.935) !important;
      color: #fff;
      transition: ease-in all 0.5s;
 }
@@ -574,10 +575,15 @@ button {
      transition: all .5s;
 }
 
-.gallery .gallery_img figure img:hover {
+.gallery .gallery_img figure img:hover  {
      transform: scale(1.2);
      cursor: pointer;
+   
 }
+
+   
+
+
 
 .gallery_text {
      text-align: center;

@@ -300,6 +300,25 @@ a {
 }
 
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* height: 100%; */
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #131312;
+}
+
+.overlay:hover {
+  opacity: 0.5;
+}
+
+
+
    </style>
    </head>
    <body class="main-layout">
@@ -512,70 +531,129 @@ a {
             </div>
             <div class="row">
                <div class="col-md-4 col-sm-6">
-                  <div class="gallery_text">
-                     <div class="galleryh3">
-                        <h3>Interior Design</h3>
-                        <p>of passages of Lorem <br>
-                           Ipsum available <br>
-                           , but the majority <br>
-                           have suffer
-                        </p>
+                  <div class="gallery_img">
+                     <div class="kotakluar" style = "height:100%;position: relative;">
+                        <div class="overlay" >
+                           <div class="text" style = "color:white;font-size:20px; width:100%;height:100%;text-align:center;display:flex;
+  align-items:center;justify-content:center;">Lamp & Decoration</div>
+                        </div>
+                        <figure><img src="{{asset('default/images/gallery2.jpg')}}" alt="#"/>
+                   
+                        </figure>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-6">
+                
+                  <div class="gallery_img">
+                    
+                     <div class="kotakluar" style = "height:100%;position: relative;">
+                        <div class="overlay" >
+                           <div class="text" style = "color:white;font-size:20px; width:100%;height:100%;text-align:center;display:flex;
+  align-items:center;justify-content:center;">Lamp & Decoration</div>
+                        </div>
+                        <figure><img src="{{asset('default/images/gallery1.jpg')}}" alt="#"/>
+                   
+                        </figure>
+                     </div>
+                     {{-- <div class = "testing" style = "opacity:1;font-size:100px;">ini testing saja</div> --}}
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-6">
+                  <div class="gallery_img">
+                     <div class="kotakluar" style = "height:100%;position: relative;">
+                        <div class="overlay" >
+                           <div class="text" style = "color:white;font-size:20px; width:100%;height:100%;text-align:center;display:flex;
+  align-items:center;justify-content:center;">Lamp & Decoration</div>
+                        </div>
+                        <figure><img src="{{asset('default/images/gallery2.jpg')}}" alt="#"/>
+                   
+                        </figure>
                      </div>
                   </div>
                </div>
                <div class="col-md-4 col-sm-6">
                   <div class="gallery_img">
-                     <figure><img src="{{asset('default/images/gallery1.jpg')}}" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6">
-                  <div class="gallery_img">
-                     <figure><img src="{{asset('default/images/gallery2.jpg')}}" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6">
-                  <div class="gallery_img">
-                     <figure><img src="{{asset('default/images/gallery3.jpg')}}" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6">
-                  <div class="gallery_img">
-                     <figure><img src="{{asset('default/images/gallery4.jpg')}}" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6">
-                  <div class="gallery_text">
-                     <div class="galleryh3">
-                        <h3>Interior Design</h3>
-                        <p>of passages of Lorem <br>
-                           Ipsum available <br>
-                           , but the majority <br>
-                           have suffer
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6">
-                  <div class="gallery_text">
-                     <div class="galleryh3">
-                        <h3>Interior Design</h3>
-                        <p>of passages of Lorem <br>
-                           Ipsum available <br>
-                           , but the majority <br>
-                           have suffer
-                        </p>
+                     <div class="kotakluar" style = "height:100%;position: relative;">
+                        <div class="overlay" >
+                           <div class="text" style = "color:white;font-size:20px; width:100%;height:100%;text-align:center;display:flex;
+  align-items:center;justify-content:center;">Lamp & Decoration</div>
+                        </div>
+                        <figure><img src="{{asset('default/images/gallery2.jpg')}}" alt="#"/>
+                   
+                        </figure>
                      </div>
                   </div>
                </div>
                <div class="col-md-4 col-sm-6">
                   <div class="gallery_img">
-                     <figure><img src="{{asset('default/images/gallery5.jpg')}}" alt="#"/></figure>
+                     <div class="kotakluar" style = "height:100%;position: relative;">
+                        <div class="overlay" >
+                           <div class="text" style = "color:white;font-size:20px; width:100%;height:100%;text-align:center;display:flex;
+  align-items:center;justify-content:center;">Lamp & Decoration</div>
+                        </div>
+                        <figure><img src="{{asset('default/images/gallery2.jpg')}}" alt="#"/>
+                   
+                        </figure>
+                     </div>
                   </div>
                </div>
                <div class="col-md-4 col-sm-6">
                   <div class="gallery_img">
-                     <figure><img src="{{asset('default/images/gallery6.jpg')}}" alt="#"/></figure>
+                     <div class="kotakluar" style = "height:100%;position: relative;">
+                        <div class="overlay" >
+                           <div class="text" style = "color:white;font-size:20px; width:100%;height:100%;text-align:center;display:flex;
+  align-items:center;justify-content:center;">Lamp & Decoration</div>
+                        </div>
+                        <figure><img src="{{asset('default/images/gallery4.jpg')}}" alt="#"/>
+                   
+                        </figure>
+                     </div>
                   </div>
+               </div>
+               <div class="col-md-4 col-sm-6">
+                  <div class="gallery_img">
+                     <div class="kotakluar" style = "height:100%;position: relative;">
+                        <div class="overlay" >
+                           <div class="text" style = "color:white;font-size:20px; width:100%;height:100%;text-align:center;display:flex;
+  align-items:center;justify-content:center;">Lamp & Decoration</div>
+                        </div>
+                        <figure><img src="{{asset('default/images/gallery4.jpg')}}" alt="#"/>
+                   
+                        </figure>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-6">
+                  <div class="gallery_img">
+                     <div class="kotakluar" style = "height:100%;position: relative;">
+                        <div class="overlay" >
+                           <div class="text" style = "color:white;font-size:20px; width:100%;height:100%;text-align:center;display:flex;
+  align-items:center;justify-content:center;">Lamp & Decoration</div>
+                        </div>
+                        <figure><img src="{{asset('default/images/gallery5.jpg')}}" alt="#"/>
+                   
+                        </figure>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-6">
+                  <div class="gallery_img">
+                     <div class="kotakluar" style = "height:100%;position: relative;">
+                        <div class="overlay" >
+                           <div class="text" style = "color:white;font-size:20px; width:100%;height:100%;text-align:center;display:flex;
+  align-items:center;justify-content:center;">Lamp & Decoration</div>
+                        </div>
+                        <figure><img src="{{asset('default/images/gallery6.jpg')}}" alt="#"/>
+                   
+                        </figure>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class = "row">
+               <div class = "col-12">
+                  <a class="read_more" href="Javascript:void(0)" style = "max-width:100%;heigth:100%;">Lihat Produk</a>
                </div>
             </div>
          </div>
@@ -667,7 +745,7 @@ a {
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Look our <span class="green" style = "color:#ff9336 !important;">Latest Product</span></h2>
+                     <h2>Look our <span class="green" style = "color:rgba(220, 152, 7, 0.935) !important;">Latest Product</span></h2>
                   </div>
                </div>
             </div>
