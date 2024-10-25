@@ -149,6 +149,7 @@ a {
   }
 }
 .navbar .navbar-menu .navbar-nav > li > a {
+   font-size:18px;
   color: #3c4250;
   text-decoration: none;
   display: inline-block;
@@ -156,6 +157,7 @@ a {
 }
 .navbar .navbar-menu .navbar-nav > li > a:hover {
    color: rgba(220, 152, 7, 0.935);
+   font-size:18px;
    font-weight: bold;
 }
 @media (max-width: 768px) {
@@ -164,6 +166,7 @@ a {
   }
 }
 .navbar .navbar-menu .navbar-nav > li.active a {
+   font-size:18px;
   color: rgba(220, 152, 7, 0.935);
   font-weight: bold;
 }
@@ -316,7 +319,9 @@ a {
 .overlay:hover {
   opacity: 0.5;
 }
-
+.bg-info {
+  background-color: rgba(220, 152, 7, 0.935) !important;
+}
 
 
    </style>
@@ -324,7 +329,23 @@ a {
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img  src="{{asset('default/images/loading.gif')}}" alt="#"/></div>
+         <div class="loader" style = "text-align:center;width:100%;">
+            {{-- <img  src="{{asset('main/images/logo/logo_belles_home.jpg')}}" alt="#"/> --}}
+          
+
+            <div class="row" style = "width:30%;">
+       
+               <div style = "width:100%;">
+                  <h3 style = "font-size:30px;">Belles&nbsp;<span style = "color:rgba(220, 152, 7, 0.935);font-weight:bold;">Home</span><span style = "color:rgba(220, 152, 7, 0.935);font-weight:bold;font-size:50px;">.</span></h3>
+               </div>
+               <div class="progress" style = "width:100%;margin-top:20px;height:8px;">
+                  
+                  <div class="progress-bar bg-info" role="progressbar" style="width: 1%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">.</div>
+                </div>
+
+            </div>
+            
+         </div>
       </div>
       <!-- end loader -->
       <!-- header -->
@@ -383,7 +404,7 @@ a {
       <!-- banner -->
       <section class="banner_main">
          <div style = "background-color:#131312;opacity:0.3;position:absolute;width:100%;height:100%;z-index:500;">
-            <div style = "position: absolute;top:75px;right:150px;color:white;font-size:14px;"><span id = "tulisanatas" style = "opacity:0;">Home Decor Terbaik</span> <br> <span id = "tulisanbawah" style = "font-size:18px;opacity:0;"> Hanya di <b>BellesHome.</b></span></div></div>
+            <div style = "position: absolute;top:75px;right:150px;color:white;font-size:13px;"><span id = "tulisanatas" style = "opacity:0;">Home Decor Terbaik <br> </span> <span id = "tulisanbawah" style = "font-size:19px;opacity:0;margin-left:15px;"> Hanya di <b>BellesHome.</b></span></div></div>
          <div id="myCarousel" class="carousel slide banner" data-ride="carousel">
             <ol class="carousel-indicators">
                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -753,7 +774,6 @@ a {
             <div class="row" style = "width:100%;" id = "product_grid_container">
                <div id = "myCarou" class="owl-carousel owl-theme">
                         <div class="item">
-                           <div class = "col-6" style = "max-width:1000px;">
                               <div class = "product_list_image">
                                  <img src = "{{asset('default/images/gallery5.jpg')}}">
                               </div>
@@ -767,14 +787,14 @@ a {
                                     <span class = "product_list_idr"> IDR</span> 10.000</p>
                               </div>
                               <div class="product_list_action" >
-                                 {{-- <button class = "btn btn-outline-info" style = ""> --}}
-                                    <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-                                 {{-- </button> --}}
+                                    <span  class = "action_button" >
+                                       <i style = "font-size:15px;" class="fa fa-external-link" aria-hidden="true"></i>
+                                    </span>
                               </div>
-                         </div>
+                         
                        </div>
                        <div class="item">
-                              <div class = "col-6" style = "max-width:1000px;">
+                        
                                  <div class = "product_list_image">
                                     <img src = "{{asset('default/images/gallery5.jpg')}}">
                                  </div>
@@ -788,14 +808,14 @@ a {
                                        <span class = "product_list_idr"> IDR</span> 10.000</p>
                                  </div>
                                  <div class="product_list_action" >
-                                    {{-- <button class = "btn btn-outline-info" style = ""> --}}
-                                       <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-                                    {{-- </button> --}}
+                                    <span  class = "action_button" >
+                                       <i style = "font-size:15px;" class="fa fa-external-link" aria-hidden="true"></i>
+                                    </span>
                                  </div>
-                            </div>
+                         
                         </div>
                         <div class="item">
-                           <div class = "col-6" style = "max-width:1000px;">
+                           
                               <div class = "product_list_image">
                                  <img src = "{{asset('default/images/gallery5.jpg')}}">
                               </div>
@@ -809,19 +829,19 @@ a {
                                     <span class = "product_list_idr"> IDR</span> 10.000</p>
                               </div>
                               <div class="product_list_action" >
-                                 {{-- <button class = "btn btn-outline-info" style = ""> --}}
-                                    <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-                                 {{-- </button> --}}
-                              </div>
+                                 <span  class = "action_button" >
+                                    <i style = "font-size:15px;" class="fa fa-external-link" aria-hidden="true"></i>
+                                 </span>
+                        
                          </div>
                        </div>
                        <div class="item">
-                              <div class = "col-6" style = "max-width:1000px;">
+                       
                                  <div class = "product_list_image">
                                     <img src = "{{asset('default/images/gallery5.jpg')}}">
                                  </div>
                                  <div class="product_list_caption">
-                                    <p>Patung Beruang Gold Float emas</p>
+                                    <p>Patung Beruang Gold Float</p>
                                  </div>
                                  <div class="product_list_price">
                                  <p> 
@@ -830,11 +850,11 @@ a {
                                        <span class = "product_list_idr"> IDR</span> 10.000</p>
                                  </div>
                                  <div class="product_list_action" >
-                                    {{-- <button class = "btn btn-outline-info" style = ""> --}}
-                                       <span  class = "action_button" >Lihat Detail <i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-                                    {{-- </button> --}}
+                                    <span  class = "action_button" >
+                                       <i style = "font-size:15px;" class="fa fa-external-link" aria-hidden="true"></i>
+                                    </span>
                                  </div>
-                            </div>
+                           
                         </div>
               </div>
             </div>
@@ -850,10 +870,14 @@ $(document).ready(function () {
 //   $("#tulisanatas").animate({ opacity: 1 });
 //   $("#tulisanbawah").animate({ opacity: 1 });
 
-  $("#tulisanatas").animate({opacity: 1}, 2350)
+  $("#tulisanatas").animate({opacity: 1}, 3350)
   .promise()
   .then(function() {
-       $("#tulisanbawah").animate({opacity: 1}, 950);
+         // $("#tulisantengah").animate({opacity: 1}, 1250).promise()
+         // .then(function() {
+            $("#tulisanbawah").animate({opacity: 1}, 1150);
+         // });
+   
   });
   
 
@@ -881,9 +905,10 @@ window.addEventListener('scroll', fillscrollline);
     loop:true,
     margin:10,
     responsiveClass:true,
+    margin: 20,
     responsive:{
         0:{
-            items:1,
+            items:2,
             nav:true
         },
         600:{

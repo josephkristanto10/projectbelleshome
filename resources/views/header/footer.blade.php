@@ -5,43 +5,25 @@
            <div class="container">
               <div class="row">
                  <div class=" col-md-3 col-sm-6">
-                    <ul class="social_icon">
-                       <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                       <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                       <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                       <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    </ul>
-                    <p class="variat pad_roght2">There are many variat
-                       ions of passages of L
-                       orem Ipsum available
-                       , but the majority h
-                       ave suffered altera
-                       tion in some form, by 
+                  <h3>Belles Home. </h3>
+                   
+                    <p class="variat pad_roght2">Kami menyediakan peralatan home decor yang berkualitas demi membuat ruangan kalian menjadi lebih estetik dan nyaman untuk dilihat.
                     </p>
                  </div>
                  <div class=" col-md-3 col-sm-6">
-                    <h3>LET US HELP YOU </h3>
-                    <p  class="variat pad_roght2">There are many variat
-                       ions of passages of L
-                       orem Ipsum available
-                       , but the majority h
-                       ave suffered altera
-                       tion in some form, by 
-                    </p>
+                    <h3>Our social media </h3>
+                    <ul class="social_icon">
+                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                     <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                  </ul>
                  </div>
                  <div class="col-md-3 col-sm-6">
-                    <h3>INFORMATION</h3>
-                    <ul class="link_menu">
-                       <li><a href="index.html">Home</a></li>
-                       <li><a href="about.html"> About</a></li>
-                       <li><a href="service.html">Services</a></li>
-                       <li><a href="gallery.html">Gallery</a></li>
-                       <li><a href="testimonial.html">Testimonial</a></li>
-                       <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
+                   .
                  </div>
                  <div class="col-md-3 col-sm-6">
-                    <h3>OUR Design</h3>
+                    <h3>Our Location</h3>
                     <p  class="variat">There are many variat
                        ions of passages of L
                        orem Ipsum available

@@ -14,9 +14,11 @@
 
     <div class="navbar-menu" id="open-navbar1">
       <ul class="navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="{{url('/')}}"> <i class="fa fa-home" aria-hidden="true"></i>
+          Home</a></li>
         <li class="navbar-dropdown">
-          <a href="#" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+          <a href="{{url('/product')}}" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+            <i class="fa fa-tag" aria-hidden="true"></i>
             Product <i class="fa fa-angle-down"></i>
           </a>
           <ul class="dropdown" id="my-dropdown-id">
@@ -27,7 +29,7 @@
             <li><a href="#">Category 3</a></li>
           </ul>
         </li>
-        <li><a href="#">Location</a></li>
+        <li><a href="#">About Us</a></li>
       </ul>
     </div>
   </div>
