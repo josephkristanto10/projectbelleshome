@@ -324,6 +324,181 @@ a {
 }
 
 
+.product {
+	padding-top: 0px;
+	padding-bottom: 10px;
+}
+.product__item {
+	margin-bottom: 35px;
+}
+
+.product__item:hover .product__hover li {
+	opacity: 1;
+	top: 0;
+}
+
+
+.product__item.sale .product__item__pic .label {
+	background: #ca1515;
+}
+
+.product__item.sale .product__item__text .product__price {
+	color: #ca1515;
+}
+
+.product__item__pic {
+	height: 360px;
+	position: relative;
+	overflow: hidden;
+}
+
+.product__item__pic .label {
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: 500;
+	display: inline-block;
+	padding: 2px 8px;
+	text-transform: uppercase;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.product__item__pic .label.new {
+	background: #36a300;
+}
+
+.product__item__pic .label.stockout {
+	background: #111111;
+}
+
+.product__item__pic .label.stockblue {
+	background: #0066bd !important;
+}
+
+.product__item__pic .label.sale {
+	background: #ca1515;
+}
+.product__hover {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: 30px;
+	text-align: center;
+}
+
+.product__hover li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+	top: 100px;
+	opacity: 0;
+}
+
+.product__hover li:nth-child(1) {
+	-webkit-transition: all 0.4s ease 0.1s;
+	-o-transition: all 0.4s ease 0.1s;
+	transition: all 0.4s ease 0.1s;
+}
+
+.product__hover li:nth-child(2) {
+	-webkit-transition: all 0.4s ease 0.15s;
+	-o-transition: all 0.4s ease 0.15s;
+	transition: all 0.4s ease 0.15s;
+}
+
+.product__hover li:nth-child(3) {
+	-webkit-transition: all 0.4s ease 0.2s;
+	-o-transition: all 0.4s ease 0.2s;
+	transition: all 0.4s ease 0.2s;
+}
+
+.product__hover li:last-child {
+	margin-right: 0;
+}
+
+.product__hover li:hover a {
+	background: #ca1515;
+   margin-top:30px;
+}
+
+.product__hover li:hover a span {
+	color: #ffffff;
+	-webkit-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+.product__hover li a {
+	font-size: 18px;
+	color: #111111;
+	display: block;
+	height: 45px;
+	width: 45px;
+	background: #ffffff;
+	line-height: 48px;
+	text-align: center;
+	border-radius: 50%;
+	-webkit-transition: all, 0.5s;
+	-o-transition: all, 0.5s;
+	transition: all, 0.5s;
+}
+
+.product__hover li a span {
+	position: relative;
+	-webkit-transform: rotate(0);
+	-ms-transform: rotate(0);
+	transform: rotate(0);
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+	display: inline-block;
+}
+
+.product__item__text {
+	text-align: center;
+	padding-top: 22px;
+}
+
+.product__item__text h6 a {
+	font-size: 14px;
+	color: #111111;
+}
+
+.product__item__text .rating {
+	line-height: 18px;
+	margin-bottom: 5px;
+}
+
+.product__item__text .rating i {
+	font-size: 10px;
+	color: #e3c01c;
+	margin-right: -4px;
+}
+
+.product__item__text .rating i:last-child {
+	margin-right: 0;
+}
+
+.product__item__text .product__price {
+	color: #111111;
+	font-weight: 600;
+}
+
+.product__item__text .product__price span {
+	font-size: 14px;
+	color: #b1b0b0;
+	text-decoration: line-through;
+	margin-left: 4px;
+}
+
+
+
+
+
+
+
    </style>
    </head>
    <body class="main-layout">
@@ -477,7 +652,7 @@ a {
                   <div class="titlepage">
                      <h2>About <span class="green" style = "color:rgba(220, 152, 7, 0.935) !important;">Us</span></h2>
                      <p>Kami adalah perusahaan yang menyediakan barang home decor terbaik agar ruangan-mu terasa elegan dan nyaman bersama <b style = "font-size:20px;">Belles Home</b></p>
-                     <a class="read_more" href="Javascript:void(0)">Lihat Produk</a>
+                     <a class="read_more" href="#latest_product">Lihat Produk</a>
                   </div>
                </div>
                <div class="col-md-7">
@@ -674,7 +849,7 @@ a {
             </div>
             <div class = "row">
                <div class = "col-12">
-                  <a class="read_more" href="Javascript:void(0)" style = "max-width:100%;heigth:100%;">Lihat Produk</a>
+                  <a class="read_more" href="#latest_product" style = "max-width:100%;heigth:100%;">Lihat Produk</a>
                </div>
             </div>
          </div>
@@ -761,7 +936,7 @@ a {
       </div> --}}
       <!-- end design -->
       <!-- latest news -->
-      <div  class="latest_news">
+      <div  class="latest_news" id = "latest_product">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
@@ -774,97 +949,203 @@ a {
             <div class="row" style = "width:100%;" id = "product_grid_container">
                <div id = "myCarou" class="owl-carousel owl-theme">
                         <div class="item">
-                              <div class = "product_list_image">
-                                 <img src = "{{asset('default/images/gallery5.jpg')}}">
-                              </div>
-                              <div class="product_list_caption">
-                                 <p>Patung Beruang Gold Float emas</p>
-                              </div>
-                              <div class="product_list_price">
-                              <p> 
-                                 {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
-
-                                    <span class = "product_list_idr"> IDR</span> 10.000</p>
-                              </div>
-                              <div class="product_list_action" >
-                                    <span  class = "action_button" >
-                                       <i style = "font-size:15px;" class="fa fa-external-link" aria-hidden="true"></i>
-                                    </span>
-                              </div>
+                              <section class="product spad" style = "padding-top:0px;">
+                                 <div class="container">
+                                    
+                                    <div class="row property__gallery" style = "margin-top:0px;">
+                                       <div class="col-lg-3 col-md-4 col-sm-6 mix women">
+                                          <div class="product__item">
+                                                <div class="product__item__pic set-bg" data-setbg="{{asset('default/images/gallery2.jpg')}}">
+                                                   <div class="label new">New</div>
+                                                   <ul class="product__hover" style = "padding-top:50px;">
+                                                      {{-- <li><a href="img/product/product-1.jpg" class="image-popup"><span class="arrow_expand"></span></a></li> --}}
+                                                      <li style = "margin-top:30px !important;"><a href="https://wa.me/+6281717727676"><span class="icon_heart_alt"> <img style = "display:inline-block;" src= "{{asset('main/images/logo/logo_wa.png')}}"/></span></a></li>
+                                                      <li data-toggle="modal" data-target="#exampleModalLong" ><a ><span class="icon_bag_alt"><img style = "display:inline-block;width:30px;height:30px;" src= "{{asset('main/images/logo/logo_info.png')}}"/></span></a></li>
+                                                   </ul>
+                                                </div>
+                                                <div class="product__item__text">
+                                                   <h6><a href="#">Buttons tweed blazer</a></h6>
+                                                   <div class="rating">
+                                                      <i class="fa fa-star"></i>
+                                                      <i class="fa fa-star"></i>
+                                                      <i class="fa fa-star"></i>
+                                                      <i class="fa fa-star"></i>
+                                                      <i class="fa fa-star"></i>
+                                                   </div>
+                                                   <div class="product__price">$ 59.0</div>
+                                                </div>
+                                          </div>
+                                       </div>
+                                   
+                                    </div>
+                                 </div>
+                              </section>
                          
                        </div>
                        <div class="item">
-                        
-                                 <div class = "product_list_image">
-                                    <img src = "{{asset('default/images/gallery5.jpg')}}">
+                        <section class="product spad" style = "padding-top:0px;">
+                           <div class="container">
+                              
+                              <div class="row property__gallery" style = "margin-top:0px;">
+                                 <div class="col-lg-3 col-md-4 col-sm-6 mix women">
+                                    <div class="product__item">
+                                          <div class="product__item__pic set-bg" data-setbg="{{asset('default/images/gallery2.jpg')}}">
+                                             <div class="label new">New</div>
+                                             <ul class="product__hover">
+                                                {{-- <li><a href="img/product/product-1.jpg" class="image-popup"><span class="arrow_expand"></span></a></li> --}}
+                                                <li><a href="https://wa.me/+6281717727676"><span class="icon_heart_alt"> <img style = "display:inline-block;" src= "{{asset('main/images/logo/logo_wa.png')}}"/></span></a></li>
+                                                <li data-toggle="modal" data-target="#exampleModalLong"><a><span class="icon_bag_alt"><img style = "display:inline-block;width:30px;height:30px;" src= "{{asset('main/images/logo/logo_info.png')}}"/></span></a></li>
+                                             </ul>
+                                          </div>
+                                          <div class="product__item__text">
+                                             <h6><a href="#">Buttons tweed blazer</a></h6>
+                                             <div class="rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                             </div>
+                                             <div class="product__price">$ 59.0</div>
+                                          </div>
+                                    </div>
                                  </div>
-                                 <div class="product_list_caption">
-                                    <p>Patung Beruang Gold Float emas</p>
-                                 </div>
-                                 <div class="product_list_price">
-                                 <p> 
-                                    {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
-
-                                       <span class = "product_list_idr"> IDR</span> 10.000</p>
-                                 </div>
-                                 <div class="product_list_action" >
-                                    <span  class = "action_button" >
-                                       <i style = "font-size:15px;" class="fa fa-external-link" aria-hidden="true"></i>
-                                    </span>
-                                 </div>
-                         
-                        </div>
-                        <div class="item">
-                           
-                              <div class = "product_list_image">
-                                 <img src = "{{asset('default/images/gallery5.jpg')}}">
+                             
                               </div>
-                              <div class="product_list_caption">
-                                 <p>Patung Beruang Gold Float emas</p>
-                              </div>
-                              <div class="product_list_price">
-                              <p> 
-                                 {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
-
-                                    <span class = "product_list_idr"> IDR</span> 10.000</p>
-                              </div>
-                              <div class="product_list_action" >
-                                 <span  class = "action_button" >
-                                    <i style = "font-size:15px;" class="fa fa-external-link" aria-hidden="true"></i>
-                                 </span>
-                        
-                         </div>
+                           </div>
+                        </section>
+                   
                        </div>
                        <div class="item">
-                       
-                                 <div class = "product_list_image">
-                                    <img src = "{{asset('default/images/gallery5.jpg')}}">
+                        <section class="product spad" style = "padding-top:0px;">
+                           <div class="container">
+                              
+                              <div class="row property__gallery" style = "margin-top:0px;">
+                                 <div class="col-lg-3 col-md-4 col-sm-6 mix women">
+                                    <div class="product__item">
+                                          <div class="product__item__pic set-bg" data-setbg="{{asset('default/images/gallery2.jpg')}}">
+                                             <div class="label new">New</div>
+                                             <ul class="product__hover">
+                                                {{-- <li><a href="img/product/product-1.jpg" class="image-popup"><span class="arrow_expand"></span></a></li> --}}
+                                                <li><a href="https://wa.me/+6281717727676"><span class="icon_heart_alt"> <img style = "display:inline-block;" src= "{{asset('main/images/logo/logo_wa.png')}}"/></span></a></li>
+                                                <li data-toggle="modal" data-target="#exampleModalLong"><a ><span class="icon_bag_alt"><img style = "display:inline-block;width:30px;height:30px;" src= "{{asset('main/images/logo/logo_info.png')}}"/></span></a></li>
+                                             </ul>
+                                          </div>
+                                          <div class="product__item__text">
+                                             <h6><a href="#">Buttons tweed blazer</a></h6>
+                                             <div class="rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                             </div>
+                                             <div class="product__price">$ 59.0</div>
+                                          </div>
+                                    </div>
                                  </div>
-                                 <div class="product_list_caption">
-                                    <p>Patung Beruang Gold Float</p>
+                             
+                              </div>
+                           </div>
+                        </section>
+                   
+                       </div>
+                       <div class="item">
+                        <section class="product spad" style = "padding-top:0px;">
+                           <div class="container">
+                              
+                              <div class="row property__gallery" style = "margin-top:0px;">
+                                 <div class="col-lg-3 col-md-4 col-sm-6 mix women">
+                                    <div class="product__item">
+                                          <div class="product__item__pic set-bg" data-setbg="{{asset('default/images/gallery2.jpg')}}">
+                                             <div class="label new">New</div>
+                                             <ul class="product__hover">
+                                                {{-- <li><a href="img/product/product-1.jpg" class="image-popup"><span class="arrow_expand"></span></a></li> --}}
+                                                <li><a href="https://wa.me/+6281717727676"><span class="icon_heart_alt"> <img style = "display:inline-block;" src= "{{asset('main/images/logo/logo_wa.png')}}"/></span></a></li>
+                                                <li data-toggle="modal" data-target="#exampleModalLong"><a><span class="icon_bag_alt"><img style = "display:inline-block;width:30px;height:30px;" src= "{{asset('main/images/logo/logo_info.png')}}"/></span></a></li>
+                                             </ul>
+                                          </div>
+                                          <div class="product__item__text">
+                                             <h6><a href="#">Buttons tweed blazer</a></h6>
+                                             <div class="rating">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                             </div>
+                                             <div class="product__price">$ 59.0</div>
+                                          </div>
+                                    </div>
                                  </div>
-                                 <div class="product_list_price">
-                                 <p> 
-                                    {{-- <i class="fa fa-money" aria-hidden="true"></i> --}}
-
-                                       <span class = "product_list_idr"> IDR</span> 10.000</p>
-                                 </div>
-                                 <div class="product_list_action" >
-                                    <span  class = "action_button" >
-                                       <i style = "font-size:15px;" class="fa fa-external-link" aria-hidden="true"></i>
-                                    </span>
-                                 </div>
-                           
-                        </div>
+                             
+                              </div>
+                           </div>
+                        </section>
+                   
+                       </div>
               </div>
             </div>
          </div>
       </div>
    
+{{-- qwewqewq --}}
+
+      {{-- Modal Detail --}}
+
+      <!-- Button trigger modal -->
+{{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+   Launch demo modal
+ </button> --}}
+ 
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLongTitle">Detail Produk</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <div class="row w-100" style = "text-align: center;margin:auto;color:#131312;">
+            <div class="col-12">
+               <img src="{{asset('default/images/gallery2.jpg')}}" style = "width:300px;height:300px;" alt="">
+               <br>
+               <h5 style = "margin-top:15px;padding-bottom:0px;font-weight:650;">Produk : </h5>
+               <h5 style = "margin-top:15px;padding-bottom:0px;">Buttons tweed blazer</h5>
+               <div class="rating" style = "font-size: 10px;color: #e3c01c;">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+               </div>
+               <div class="product__price">$ 59.0</div>
+               <h5 style = "margin-top:15px;padding-bottom:0px;font-weight:650;">Kategori : </h5>
+               <h5 style = "margin-top:15px;padding-bottom:0px;"> -  </h5>
+               <b><h5 style = "margin-top:15px;padding-bottom:0px;font-weight:650;">Pilihan Motif : </h5></b>
+               <h5 style = "margin-top:15px;padding-bottom:0px;"> Kuning Merah Hijau  </h5>
+
+            
+            </div>
+         </div>
+       </div>
+       <div class="modal-footer">
+         {{-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> --}}
+         <button type="button" style = "width:100%;" class="btn btn-outline-success"><img style = "width:50px;height:50px;" src= "{{asset('main/images/logo/logo_wa.png')}}"/>Whatsapp for Info</button>
+       </div>
+     </div>
+   </div>
+ </div>
+
+
       @include("header.footer")
    </body>
 </html>
 <script>
+   
 
 $(document).ready(function () {
 //   $("#tulisanatas").animate({ opacity: 1 });
@@ -922,4 +1203,10 @@ window.addEventListener('scroll', fillscrollline);
         }
     }
 })
+</script>
+<script>
+   $('.set-bg').each(function () {
+      var bg = $(this).data('setbg');
+      $(this).css('background-image', 'url(' + bg + ')');
+  });
 </script>
