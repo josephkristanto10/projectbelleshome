@@ -813,6 +813,7 @@ a {
                                                 </div>
                                                 <div class="product__item__text">
                                                    <h6><a href="#">Buttons tweed blazer</a></h6>
+                                                   <div class="product__price">$ 59.0</div>
                                                    <div class="rating">
                                                       <i class="fa fa-star"></i>
                                                       <i class="fa fa-star"></i>
@@ -820,7 +821,6 @@ a {
                                                       <i class="fa fa-star"></i>
                                                       <i class="fa fa-star"></i>
                                                    </div>
-                                                   <div class="product__price">$ 59.0</div>
                                                 </div>
                                           </div>
                                        </div>
@@ -847,6 +847,7 @@ a {
                                           </div>
                                           <div class="product__item__text">
                                              <h6><a href="#">Buttons tweed blazer</a></h6>
+                                             <div class="product__price">$ 59.0</div>
                                              <div class="rating">
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
@@ -854,7 +855,6 @@ a {
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
                                              </div>
-                                             <div class="product__price">$ 59.0</div>
                                           </div>
                                     </div>
                                  </div>
@@ -881,6 +881,7 @@ a {
                                           </div>
                                           <div class="product__item__text">
                                              <h6><a href="#">Buttons tweed blazer</a></h6>
+                                             <div class="product__price">$ 59.0</div>
                                              <div class="rating">
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
@@ -888,7 +889,6 @@ a {
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
                                              </div>
-                                             <div class="product__price">$ 59.0</div>
                                           </div>
                                     </div>
                                  </div>
@@ -915,6 +915,7 @@ a {
                                           </div>
                                           <div class="product__item__text">
                                              <h6><a href="#">Buttons tweed blazer</a></h6>
+                                             <div class="product__price">$ 59.0</div>
                                              <div class="rating">
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
@@ -922,7 +923,6 @@ a {
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
                                              </div>
-                                             <div class="product__price">$ 59.0</div>
                                           </div>
                                     </div>
                                  </div>
@@ -936,9 +936,9 @@ a {
             </div>
             <div class = "row">
                <div class = "col-12" style = "text-align:center;">
-                  <a class="read_more" href="#latest_product" style = "margin:auto;width:20%;heigth:100%;">Produk Lainnya</a>
+                  <a href="#latest_product" style = "margin:auto;width:20%;height:100%;"><b><u>Produk Lainnya</u></b></a>
                </div>
-            </div>
+            </div> 
          </div>
       </div>
       <div  style= "position:relative;;text-align:center !important;">
@@ -953,7 +953,7 @@ a {
                <div class="row">
                   <div class="col-md-12">
                      <div class="titlepage">
-                        <h2>Look our <span class="green" style = "color:#131312 !important;">Latest Products</span></h2>
+                        <h2>Best Items To Buy ! <span class="green" style = "color:#131312 !important;"> </span></h2>
                      </div>
                   </div>
                </div>
@@ -977,6 +977,7 @@ a {
                                                    </div>
                                                    <div class="product__item__text">
                                                       <h6><a href="#">Buttons tweed blazer</a></h6>
+                                                      <div class="product__price">$ 59.0</div>
                                                       <div class="rating">
                                                          <i class="fa fa-star"></i>
                                                          <i class="fa fa-star"></i>
@@ -984,7 +985,6 @@ a {
                                                          <i class="fa fa-star"></i>
                                                          <i class="fa fa-star"></i>
                                                       </div>
-                                                      <div class="product__price">$ 59.0</div>
                                                    </div>
                                              </div>
                                           </div>
@@ -1011,6 +1011,7 @@ a {
                                              </div>
                                              <div class="product__item__text">
                                                 <h6><a href="#">Buttons tweed blazer</a></h6>
+                                                <div class="product__price">$ 59.0</div>
                                                 <div class="rating">
                                                    <i class="fa fa-star"></i>
                                                    <i class="fa fa-star"></i>
@@ -1018,7 +1019,6 @@ a {
                                                    <i class="fa fa-star"></i>
                                                    <i class="fa fa-star"></i>
                                                 </div>
-                                                <div class="product__price">$ 59.0</div>
                                              </div>
                                        </div>
                                     </div>
@@ -1045,6 +1045,7 @@ a {
                                              </div>
                                              <div class="product__item__text">
                                                 <h6><a href="#">Buttons tweed blazer</a></h6>
+                                                <div class="product__price">$ 59.0</div>
                                                 <div class="rating">
                                                    <i class="fa fa-star"></i>
                                                    <i class="fa fa-star"></i>
@@ -1052,7 +1053,6 @@ a {
                                                    <i class="fa fa-star"></i>
                                                    <i class="fa fa-star"></i>
                                                 </div>
-                                                <div class="product__price">$ 59.0</div>
                                              </div>
                                        </div>
                                     </div>
@@ -1079,6 +1079,7 @@ a {
                                              </div>
                                              <div class="product__item__text">
                                                 <h6><a href="#">Buttons tweed blazer</a></h6>
+                                                <div class="product__price">$ 59.0</div>
                                                 <div class="rating">
                                                    <i class="fa fa-star"></i>
                                                    <i class="fa fa-star"></i>
@@ -1086,7 +1087,6 @@ a {
                                                    <i class="fa fa-star"></i>
                                                    <i class="fa fa-star"></i>
                                                 </div>
-                                                <div class="product__price">$ 59.0</div>
                                              </div>
                                        </div>
                                     </div>
@@ -1098,6 +1098,12 @@ a {
                           </div>
                  </div>
                </div>
+
+               <div class = "row">
+                  <div class = "col-12" style = "text-align:center;">
+                     <a href="#latest_product" style = "margin:auto;width:20%;height:100%;"><b><u>Produk Lainnya</u></b></a>
+                  </div>
+               </div> 
             </div>
          </div>
 
@@ -1139,6 +1145,7 @@ a {
                                                    </div>
                                                    <div class="product__item__text">
                                                       <h6><a href="#">Buttons tweed blazer</a></h6>
+                                                      <div class="product__price">$ 59.0</div>
                                                       <div class="rating">
                                                          <i class="fa fa-star"></i>
                                                          <i class="fa fa-star"></i>
@@ -1146,7 +1153,6 @@ a {
                                                          <i class="fa fa-star"></i>
                                                          <i class="fa fa-star"></i>
                                                       </div>
-                                                      <div class="product__price">$ 59.0</div>
                                                    </div>
                                              </div>
                                           </div>
@@ -1173,6 +1179,7 @@ a {
                                              </div>
                                              <div class="product__item__text">
                                                 <h6><a href="#">Buttons tweed blazer</a></h6>
+                                                <div class="product__price">$ 59.0</div>
                                                 <div class="rating">
                                                    <i class="fa fa-star"></i>
                                                    <i class="fa fa-star"></i>
@@ -1180,7 +1187,7 @@ a {
                                                    <i class="fa fa-star"></i>
                                                    <i class="fa fa-star"></i>
                                                 </div>
-                                                <div class="product__price">$ 59.0</div>
+                                             
                                              </div>
                                        </div>
                                     </div>
@@ -1207,6 +1214,7 @@ a {
                                              </div>
                                              <div class="product__item__text">
                                                 <h6><a href="#">Buttons tweed blazer</a></h6>
+                                                <div class="product__price">$ 59.0</div>
                                                 <div class="rating">
                                                    <i class="fa fa-star"></i>
                                                    <i class="fa fa-star"></i>
@@ -1214,7 +1222,7 @@ a {
                                                    <i class="fa fa-star"></i>
                                                    <i class="fa fa-star"></i>
                                                 </div>
-                                                <div class="product__price">$ 59.0</div>
+                                             
                                              </div>
                                        </div>
                                     </div>
@@ -1241,6 +1249,7 @@ a {
                                              </div>
                                              <div class="product__item__text">
                                                 <h6><a href="#">Buttons tweed blazer</a></h6>
+                                                <div class="product__price">$ 59.0</div>
                                                 <div class="rating">
                                                    <i class="fa fa-star"></i>
                                                    <i class="fa fa-star"></i>
@@ -1248,7 +1257,6 @@ a {
                                                    <i class="fa fa-star"></i>
                                                    <i class="fa fa-star"></i>
                                                 </div>
-                                                <div class="product__price">$ 59.0</div>
                                              </div>
                                        </div>
                                     </div>
@@ -1260,6 +1268,12 @@ a {
                           </div>
                  </div>
                </div>
+
+               <div class = "row">
+                  <div class = "col-12" style = "text-align:center;">
+                     <a href="#latest_product" style = "margin:auto;width:20%;height:100%;"><b><u>Produk Lainnya</u></b></a>
+                  </div>
+               </div> 
             </div>
          </div>
 
@@ -1291,6 +1305,7 @@ a {
                <br>
                <h5 style = "margin-top:15px;padding-bottom:0px;font-weight:650;">Produk : </h5>
                <h5 style = "margin-top:15px;padding-bottom:0px;">Buttons tweed blazer</h5>
+               <div class="product__price">$ 59.0</div>
                <div class="rating" style = "font-size: 10px;color: #e3c01c;">
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
@@ -1298,7 +1313,6 @@ a {
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
                </div>
-               <div class="product__price">$ 59.0</div>
                <h5 style = "margin-top:15px;padding-bottom:0px;font-weight:650;">Kategori : </h5>
                <h5 style = "margin-top:15px;padding-bottom:0px;"> -  </h5>
                <b><h5 style = "margin-top:15px;padding-bottom:0px;font-weight:650;">Pilihan Motif : </h5></b>
