@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar" style = "background-color:#131312;border:0px;transition:all .2s ease;">
   <div class="container">
 
     <div class="navbar-header">
@@ -8,17 +8,18 @@
         <span></span>
       </button>
       <a href="#">
-        <h3 style = "font-size:30px;">Belles&nbsp;<span style = "color:rgba(220, 152, 7, 0.935);font-weight:bold;">Home</span><span style = "color:rgba(220, 152, 7, 0.935);font-weight:bold;font-size:50px;">.</span></h3>
+        <h3 style = "font-size:30px;color:white;">Belles&nbsp;<span style = "color:white;font-weight:bold;">Home</span><span style = "color:white;font-weight:bold;font-size:50px;">.</span></h3>
       </a>
     </div>
 
-    <div class="navbar-menu" id="open-navbar1">
-      <ul class="navbar-nav">
-        <li class="active"><a href="{{url('/')}}"> <i class="fa fa-home" aria-hidden="true"></i>
+    <div class="navbar-menu" id="open-navbar1" style = "font-family: sans-serif !important;" >
+      <ul class="navbar-nav" >
+        <li class="active"><a href="{{url('/')}}"> 
+          {{-- <i class="fa fa-home" aria-hidden="true"></i> --}}
           Home</a></li>
         <li class="navbar-dropdown">
           <a href="{{url('/product')}}" class="dropdown-toggler" data-dropdown="my-dropdown-id">
-            <i class="fa fa-tag" aria-hidden="true"></i>
+            {{-- <i class="fa fa-tag" aria-hidden="true"></i> --}}
             Product <i class="fa fa-angle-down"></i>
           </a>
           <ul class="dropdown" id="my-dropdown-id">
@@ -36,7 +37,7 @@
 </nav>
 
 
-<div class="scroll-line"></div>
+<div class="scroll-line" style = "z-index:2000000;"></div>
 
     <div class="conatainer">
    
