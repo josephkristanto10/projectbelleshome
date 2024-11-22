@@ -2,11 +2,11 @@
   <div class="container">
 
     <div class="navbar-header">
-      <button class="navbar-toggler" data-toggle="open-navbar1">
+      {{-- <button class="navbar-toggler" data-toggle="open-navbar1">
         <span></span>
         <span></span>
         <span></span>
-      </button>
+      </button> --}}
       <a href="#">
         <h3 style = "font-size:30px;color:white;">Belles&nbsp;<span style = "color:white;font-weight:bold;">Home</span><span style = "color:white;font-weight:bold;font-size:50px;">.</span></h3>
       </a>
@@ -18,7 +18,7 @@
           {{-- <i class="fa fa-home" aria-hidden="true"></i> --}}
           Home</a></li>
         <li class="navbar-dropdown">
-          <a href="{{url('/product')}}" class="dropdown-toggler" data-dropdown="my-dropdown-id">
+          <a href="{{url('/collection')}}" class="dropdown-toggler" data-dropdown="my-dropdown-id">
             {{-- <i class="fa fa-tag" aria-hidden="true"></i> --}}
             Product <i class="fa fa-angle-down"></i>
           </a>
@@ -34,8 +34,24 @@
       </ul>
     </div>
   </div>
+<div style = "clear:both;margin-top:40px;"></div>
+{{-- <nav class="navbar" id = "navbar2" style = "background-color:#131312;border:0px;transition:all .2s ease;"> --}}
+  <div class="container" style = "background-color: #131312;margin-top:30px;">
+    <div style = "background-color:#131312;border:0px;transition:all .2s ease;color:white; width:100%;" id = "mycategories" class="owl-carousel owl-theme" >
+     
+      <div class="item navbar_menu_page" > <a href = "{{url("/")}}" style = "color:white !important;">Home</a></div>
+      <div class="item navbar_menu_page" > <a href = "{{url("/collection")}}" style = "color:white !important;">All Product</a></div>
+      @foreach($category as $c)
+      <div class="item navbar_items" data-id-cat = "{{$c->id}}" >{{$c->name}}</div>
+      @endforeach
+    </div>
+  </div>
+</div>
+{{-- </nav> --}}
 </nav>
 
+
+<div class="container">
 
 <div class="scroll-line" style = "z-index:2000000;"></div>
 

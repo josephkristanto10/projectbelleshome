@@ -3,228 +3,106 @@
    @include('header.header')
    <head>
 	<link rel="stylesheet" href="{{asset('main/css/custom/product.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        @font-face {
+  font-family: 'ZenAntique';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("{{asset('main/font/ZenAntique_regular_v12.woff')}}") format('woff')
+}       
+body{
+   font-family:ZenAntique !important;font-weight:200 !important;
+}
+.navbar .navbar-menu .navbar-nav > li.active a {
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+.navbar .navbar-menu .navbar-nav > li > a:hover {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.navbar .navbar-menu .navbar-nav > li  a {
+  font-size: 15px;
+  color: white;
+}
+.owl-stage{
+    
+    width: 100%;
+}
+.gbr:hover{
+    transition:all 1s;
+    transform: scale(1.1);
+}
+.gbr{
+    transition:all 1s;
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+}
+
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.navbar_items{
+   cursor:pointer;
+}
+    </style>
+
+
    </head>
    <body>
     @include('header.menu')
  
-    <div id="about" class="about" style = "padding-top:20px;">
-        <div class="container" style = "padding-left:10px;">
-            {{-- <h2>Our <span class="green" style = "color:rgba(220, 152, 7, 0.935) !important;">Product</span></h2>
-           <div class="row">
-              <div class="col-md-5">
-                 <div class="titlepage" style = "padding-left: 20px;">
-                    <h2>Our Product <span class="green" style = "color:rgba(220, 152, 7, 0.935) !important;"></span></h2>
-                   
-                 </div>
-              </div>
-      
-           </div> --}}
-           <div class="row">
-            
-            <section class="product spad" style = "padding-top:10px;">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4" >
-                            <div class="titlepage" style = "margin:0;padding-left:15px;">
-                                <h2>Our product</h2>
-                             </div>
-                         </div>
-                         <div class="col-lg-8 col-md-8" >
-                             <ul class="filter__controls" style = "padding-top:10px;">
-                                 <li class="active" data-filter="*">All</li>
-                                 <li data-filter=".women">Women’s</li>
-                                 <li data-filter=".men">Men’s</li>
-                         <li data-filter=".kid">Kid’s</li>
-                         <li data-filter=".accessories">Accessories</li>
-                         <li data-filter=".cosmetic">Cosmetics</li>
-							</ul>
-						</div>
-           			 </div>
-             <div class="row property__gallery" style = "margin-top:15px;">
-                 <div class="col-lg-3 col-md-4 col-sm-6 mix women">
-                     <div class="product__item">
-                         <div class="product__item__pic set-bg" data-setbg="{{asset('default/images/gallery2.jpg')}}">
-                             <div class="label new">New</div>
-                             <ul class="product__hover">
-                                {{-- <li><a href="img/product/product-5.jpg" class="image-popup"><span class="arrow_expand"></span></a></li> --}}
-                                <li><a href="https://wa.me/+6281717727676"><span class="icon_heart_alt"> <img src= "{{asset('main/images/logo/logo_wa.png')}}"/></span></a></li>
-                                <li data-toggle="modal" data-target="#exampleModalL><span class="icon_bag_alt"><img style = "width:30px;height:30px;" src= "{{asset('main/images/logo/logo_info.png')}}"/></span></a></li>
-                            </ul>
-                         </div>
-                         <div class="product__item__text">
-                             <h6><a href="#">Buttons tweed blazer</a></h6>
-                             <div class="rating">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                             </div>
-                             <div class="product__price">$ 59.0</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 mix men">
-                     <div class="product__item">
-                         <div class="product__item__pic set-bg" data-setbg="{{asset('default/images/gallery3.jpg')}}">
-                            <ul class="product__hover">
-                                {{-- <li><a href="img/product/product-5.jpg" class="image-popup"><span class="arrow_expand"></span></a></li> --}}
-                                <li><a href="https://wa.me/+6281717727676"><span class="icon_heart_alt"> <img src= "{{asset('main/images/logo/logo_wa.png')}}"/></span></a></li>
-                                <li data-toggle="modal" data-target="#exampleModalLong"><a ><span class="icon_bag_alt"><img style = "width:30px;height:30px;" src= "{{asset('main/images/logo/logo_info.png')}}"/></span></a></li>
-                            </ul>
-                         </div>
-                         <div class="product__item__text">
-                             <h6><a href="#">Flowy striped skirt</a></h6>
-                             <div class="rating">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                             </div>
-                             <div class="product__price">$ 49.0</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 mix accessories">
-                     <div class="product__item">
-                         <div class="product__item__pic set-bg" data-setbg="{{asset('default/images/gallery4.jpg')}}">
-                             <div class="label stockout">out of stock</div>
-                             <ul class="product__hover">
-                                {{-- <li><a href="img/product/product-5.jpg" class="image-popup"><span class="arrow_expand"></span></a></li> --}}
-                                <li><a href="https://wa.me/+6281717727676"><span class="icon_heart_alt"> <img src= "{{asset('main/images/logo/logo_wa.png')}}"/></span></a></li>
-                                <li data-toggle="modal" data-target="#exampleModalLong"><a ><span class="icon_bag_alt"><img style = "width:30px;height:30px;" src= "{{asset('main/images/logo/logo_info.png')}}"/></span></a></li>
-                            </ul>
-                         </div>
-                         <div class="product__item__text">
-                             <h6><a href="#">Cotton T-Shirt</a></h6>
-                             <div class="rating">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                             </div>
-                             <div class="product__price">$ 59.0</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 mix cosmetic">
-                     <div class="product__item">
-                         <div class="product__item__pic set-bg" data-setbg="{{asset('default/images/gallery1.jpg')}}">
-                            <ul class="product__hover">
-                                {{-- <li><a href="img/product/product-5.jpg" class="image-popup"><span class="arrow_expand"></span></a></li> --}}
-                                <li><a href="https://wa.me/+6281717727676"><span class="icon_heart_alt"> <img src= "{{asset('main/images/logo/logo_wa.png')}}"/></span></a></li>
-                                <li data-toggle="modal" data-target="#exampleModalLong"><a ><span class="icon_bag_alt"><img style = "width:30px;height:30px;" src= "{{asset('main/images/logo/logo_info.png')}}"/></span></a></li>
-                            </ul>
-                         </div>
-                         <div class="product__item__text">
-                             <h6><a href="#">Slim striped pocket shirt</a></h6>
-                             <div class="rating">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                             </div>
-                             <div class="product__price">$ 59.0</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 mix kid">
-                     <div class="product__item">
-                         <div class="product__item__pic set-bg" data-setbg="{{asset('default/images/gallery5.jpg')}}">
-                             <ul class="product__hover">
-                                 {{-- <li><a href="img/product/product-5.jpg" class="image-popup"><span class="arrow_expand"></span></a></li> --}}
-								 <li><a href="https://wa.me/+6281717727676"><span class="icon_heart_alt"> <img src= "{{asset('main/images/logo/logo_wa.png')}}"/></span></a></li>
-                                 <li data-toggle="modal" data-target="#exampleModalLong"><a ><span class="icon_bag_alt"><img style = "width:30px;height:30px;" src= "{{asset('main/images/logo/logo_info.png')}}"/></span></a></li>
-                             </ul>
-                         </div>
-                         <div class="product__item__text">
-                             <h6><a href="#">Fit micro corduroy shirt</a></h6>
-                             <div class="rating">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                             </div>
-                             <div class="product__price">$ 59.0</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                     <div class="product__item sale">
-                         <div class="product__item__pic set-bg" data-setbg="{{asset('default/images/gallery6.jpg')}}">
-                             <div class="label sale">Sale</div>
-                             <ul class="product__hover">
-                                 <li><a href="https://wa.me/+6281717727676" ><span class="icon_heart_alt"> <img src= "{{asset('main/images/logo/logo_wa.png')}}"/></span></a></li>
-                                 <li data-toggle="modal" data-target="#exampleModalLong"><a ><span class="icon_bag_alt"><img style = "width:30px;height:30px;" src= "{{asset('main/images/logo/logo_info.png')}}"/></span></a></li>
-                             </ul>
-                         </div>
-                         <div class="product__item__text">
-                             <h6><a href="#">Tropical Kimono</a></h6>
-                             <div class="rating">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                             </div>
-                             <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                     <div class="product__item">
-                         <div class="product__item__pic set-bg" data-setbg="img/product/product-7.jpg">
-                             <ul class="product__hover">
-                                 <li><a href="https://wa.me/+6281717727676"><span class="icon_heart_alt"> <img src= "{{asset('main/images/logo/logo_wa.png')}}"/></span></a></li>
-                                 <li data-toggle="modal" data-target="#exampleModalLong"><a ><span class="icon_bag_alt"><img style = "width:30px;height:30px;" src= "{{asset('main/images/logo/logo_info.png')}}"/></span></a></li>
-                             </ul>
-                         </div>
-                         <div class="product__item__text">
-                             <h6><a href="#">Contrasting sunglasses</a></h6>
-                             <div class="rating">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                             </div>
-                             <div class="product__price">$ 59.0</div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                     <div class="product__item sale">
-                         <div class="product__item__pic set-bg" data-setbg="img/product/product-8.jpg">
-                             <div class="label">Sale</div>
-                             <ul class="product__hover">
-								 <li><a href="https://wa.me/+6281717727676" ><span class="icon_heart_alt"> <img src= "{{asset('main/images/logo/logo_wa.png')}}"/></span></a></li>
-                                 <li data-toggle="modal" data-target="#exampleModalLong"><a  ><span class="icon_bag_alt"><img style = "width:30px;height:30px;" src= "{{asset('main/images/logo/logo_info.png')}}"/></span></a></li>
-                             </ul>
-                         </div>
-                         <div class="product__item__text">
-                             <h6><a href="#">Water resistant backpack</a></h6>
-                             <div class="rating">
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                                 <i class="fa fa-star"></i>
-                             </div>
-                             <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </section>
-           </div>
-        </div>
-     </div>
+   
     
+
+     <section class="" style = "padding-top:10px;margin-top:20px;">
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4" >
+                        <div class="titlepage" style = "margin:0;padding-left:0px;">
+                            <h2 style = "text-align:left;">Our product</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8" >
+                        <ul class="filter__controls" style = "padding-top:10px;">
+                    
+                    <li class="active item" onclick = "change_category(0)" data-click-id = "0">All</li>
+                    @foreach($category as $c)
+                    <li class="item" onclick = "change_category({{$c->id}})" data-click-id = "{{$c->id}}">{{$c->name}}</li>
+                    @endforeach
+                        </ul>
+                    </div>
+                </div>
+                <div class = "row" >
+                    <div class="col-12">
+                        <input id = "keyword_product" type="text" class = "form-control" placeholder="Find your items here..." style = "float:left;border-radius:30px;font-size:15px;color:#131312;padding:10px;width:92%;height:35px;"/>
+                        <i class="fa fa-search" aria-hidden="true" onclick = "search_button()" style = "float:left;font-size:20px;margin-top:5px;margin-left:5px;"></i>            
+                    </div>
+                    
+      
+                </div>
+                <div class="row " style = "margin-top:25px;margin-bottom:50px;padding-right:25px;"  id ="replace_product">
+             
+                        @include("product_card")
+           
+                      
+                </div>
+        </div> 
+       
+     </section>
      
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -273,8 +151,127 @@
 </body>
 </html>
 <script>
+       $('#mycategories').owlCarousel({
+    loop:false,
+    margin:80,
+    responsiveClass:true,
+    autoWidth:true,
+    responsive:{
+        0:{
+            items:10,
+            nav:true
+        },
+        600:{
+            items:10,
+            nav:true
+        },
+        1000:{
+            items:10,
+            nav:true,
+            loop:false
+        }
+    }
+})
      $('.set-bg').each(function () {
         var bg = $(this).data('setbg');
         $(this).css('background-image', 'url(' + bg + ')');
     });
+
+
+    var data_pilihan_category = 0;
+var keywords= "";
+var status_search = "ok";
+$(document).on('click', '.mylinks a', function(event){
+ 
+ event.preventDefault(); 
+ var page = $(this).attr('href').split('page=')[1];
+
+ fetch_data(page);
+});
+
+function fetch_data(page)
+{
+ $.ajax({
+  url:"/pagination/fetch_data_index?page="+page,
+  data:{"category" : data_pilihan_category, "keyword" : keywords},
+  complete:function(){
+	status_search = "ok";
+        },
+  success:function(data)
+  {
+	status_search = "ok";
+   $('#replace_product').html(data);
+
+//    $('.owl-carousel').owlCarousel({
+//     loop:true,
+//     margin:10,
+//     nav:true,
+//     responsive:{
+//         0:{
+//             items:1
+//         },
+//         600:{
+//             items:1
+//         },
+//         1000:{
+//             items:1
+//         }
+//     }
+// });
+  }
+ });
+ 
+}
+
+
+
+$('#keyword_product').keypress(function(event){
+  if(event.keyCode == 13){
+	search_button();
+  }
+});
+
+function search_button(){
+
+	if(status_search = "ok"){
+		status_search = "no";
+		keywords = $("#keyword_product").val();
+		fetch_data(1);
+	}
+	else{
+		Swal.fire({
+              title: "Tunggu",
+              text: "Silahkan tunggu sampai data selesai dicari",
+              icon: "info",
+              confirmButtonColor: "#3085d6",
+              confirmButtonText: "ok"
+            });
+		}
+}
+function change_category(id_category){
+	if(status_search = "ok"){
+		status_search = "no";
+		$("#keyword_product").val("");
+		data_pilihan_category = id_category;
+		keywords = "";
+		fetch_data(1);
+	}
+	else{
+			Swal.fire({
+              title: "Tunggu",
+              text: "Silahkan tunggu sampai data selesai dicari",
+              icon: "info",
+              confirmButtonColor: "#3085d6",
+              confirmButtonText: "ok"
+            });
+	}
+
+}
+
+$(".navbar_items").click(function (e) { 
+   e.preventDefault();
+   var data_category = $(this).attr("data-id-cat");
+   window.location.href = "{{url('/collection/')}}/"+data_category;
+});
+
 </script>

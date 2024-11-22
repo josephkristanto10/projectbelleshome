@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="{{asset('default/css/bootstrap.min.css')}}">
+    {{-- <link rel="stylesheet" href="{{asset('default/css/bootstrap.min.css')}}"> --}}
     <!-- style css -->
     <link rel="stylesheet" href="{{asset('default/css/style.css')}}">
     <!-- Responsive-->

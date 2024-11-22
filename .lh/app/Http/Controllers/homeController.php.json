@@ -1,0 +1,50 @@
+{
+    "sourceFile": "app/Http/Controllers/homeController.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1732269797258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1732269803590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n      * @return \\Illuminate\\Http\\Response\n      */\n     public function index()\n     {\n-        //\n+        return view();\n     }\n \n     /**\n      * Show the form for creating a new resource.\n"
+                },
+                {
+                    "date": 1732269810251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n      * @return \\Illuminate\\Http\\Response\n      */\n     public function index()\n     {\n-        return view();\n+        return view(\"main.index\");\n     }\n \n     /**\n      * Show the form for creating a new resource.\n"
+                },
+                {
+                    "date": 1732269854949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n namespace App\\Http\\Controllers;\n \n use Illuminate\\Http\\Request;\n+use App\\Models\\MainWebsite;\n \n class homeController extends Controller\n {\n     /**\n"
+                },
+                {
+                    "date": 1732269860245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n namespace App\\Http\\Controllers;\n \n use Illuminate\\Http\\Request;\n use App\\Models\\MainWebsite;\n+use App\\Models\\Category;\n \n class homeController extends Controller\n {\n     /**\n"
+                },
+                {
+                    "date": 1732269872991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n      * @return \\Illuminate\\Http\\Response\n      */\n     public function index()\n     {\n+        $all_Data = MainWebsite::all();\n         return view(\"main.index\");\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1732269880816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n      * @return \\Illuminate\\Http\\Response\n      */\n     public function index()\n     {\n+        $category = Category::all();\n         $all_Data = MainWebsite::all();\n         return view(\"main.index\");\n     }\n \n"
+                },
+                {
+                    "date": 1732269886971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n      */\n     public function index()\n     {\n         $category = Category::all();\n-        $all_Data = MainWebsite::all();\n+        $alldata = MainWebsite::all();\n         return view(\"main.index\");\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1732269893029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     public function index()\n     {\n         $category = Category::all();\n         $alldata = MainWebsite::all();\n-        return view(\"main.index\");\n+        return view(\"main.index\", compact(\"category\"));\n     }\n \n     /**\n      * Show the form for creating a new resource.\n"
+                }
+            ],
+            "date": 1732269797258,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\n\nclass homeController extends Controller\n{\n    /**\n     * Display a listing of the resource.\n     *\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function index()\n    {\n        //\n    }\n\n    /**\n     * Show the form for creating a new resource.\n     *\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function create()\n    {\n        //\n    }\n\n    /**\n     * Store a newly created resource in storage.\n     *\n     * @param  \\Illuminate\\Http\\Request  $request\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function store(Request $request)\n    {\n        //\n    }\n\n    /**\n     * Display the specified resource.\n     *\n     * @param  int  $id\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function show($id)\n    {\n        //\n    }\n\n    /**\n     * Show the form for editing the specified resource.\n     *\n     * @param  int  $id\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function edit($id)\n    {\n        //\n    }\n\n    /**\n     * Update the specified resource in storage.\n     *\n     * @param  \\Illuminate\\Http\\Request  $request\n     * @param  int  $id\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function update(Request $request, $id)\n    {\n        //\n    }\n\n    /**\n     * Remove the specified resource from storage.\n     *\n     * @param  int  $id\n     * @return \\Illuminate\\Http\\Response\n     */\n    public function destroy($id)\n    {\n        //\n    }\n}"
+        }
+    ]
+}
