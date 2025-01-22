@@ -8,7 +8,7 @@
         <span></span>
       </button> --}}
       <a href="#">
-        <h3 style = "font-size:30px;color:white;">Belles&nbsp;<span style = "color:white;font-weight:bold;">Home</span><span style = "color:white;font-weight:bold;font-size:50px;">.</span></h3>
+        <h3 style = "font-size:30px;color:white;"><img src = "{{asset('main/images/logo/logo_putih.png')}}" style = "width:125px;height:100px;margin-top:20px;"></h3>
       </a>
     </div>
 
